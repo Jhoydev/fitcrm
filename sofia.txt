@@ -1,0 +1,92 @@
+
+   
+                                            <h5 class="mb-1"><i class="fa fa-users" aria-hidden="true"></i> Participantes</h5>
+                                            <h5 class="mb-1">Categorias</h5>
+                                            <h5 class="mb-1">Entradas</h5>
+                                            <h5 class="mb-1">Galeria de fotos</h5>
+                                            <h5 class="mb-1">Jurados</h5>
+                                            <h5 class="mb-1">Pesaje</h5>
+                                            <small class="text-muted">3 days ago</small>
+                                            <small class="text-muted">3 days ago</small>
+                                            <small class="text-muted">3 days ago</small>
+                                            <small class="text-muted">3 days ago</small>
+                                            <small class="text-muted">3 days ago</small>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="d-flex w-100 justify-content-between">
+                                        <div class="d-flex w-100 justify-content-between">
+                                        <div class="d-flex w-100 justify-content-between">
+                                        <div class="d-flex w-100 justify-content-between">
+                                        <div class="d-flex w-100 justify-content-between">
+                                        <div class="d-flex w-100 justify-content-between">
+                                        <div class="d-flex w-100 justify-content-between">
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                        <small>Donec id elit non mi porta.</small>
+                                        <small>Donec id elit non mi porta.</small>
+                                    </a>
+                                    </a>
+                                    </a>
+                                    </a>
+                                    </a>
+                                    </a>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-act8ujm i98u8uikm ouk0,ok,'pl,0pion flex-column align-items-start">
+                                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                </div>
+                                </div>
+                                <div class="list-group">
+                                <div class="list-group">
+                            </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                            <div class="col-md-6">
+                        </div>
+                        <div class="row">
+                    </div>
+                    <div class="card-body">
+                </div>
+                <div class="card w-100">
+                <h3 class="text-center"><i class="fa fa-trophy text-warning"></i> {{ $champioship->name }} <i class="ml-5 fa fa-calendar text-danger"></i> {{ $champioship->date->toFormattedDateString() }}</h3>
+            </div>
+            </div>
+            <div class="col-12">
+            <div class="col-md-12">
+        </div>
+        </div>
+        <div class="row mb-3">
+        <div class="row">
+    </div>
+    <div class="container-fluid">
+  `ñ:-@extends('layouts.app')
+  opklm  k 9ok, ok¡
+ ++ vf                                       <small>3 days ago</small>
+ pñ0-pñ.¡`+
+ ´-
++ç                                    <h5 class="mb-1">Premios</h5>
+696520
+@endsection
+@section('content')
+`ç*
+ñ7n +0oL,0pl,./74

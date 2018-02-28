@@ -1,0 +1,25 @@
+.mt-nav{
+  margin-top: 110px!important;
+}
+#front-carousel{
+  width: 100%;
+  .carousel-inner{
+    .carousel-item{
+      .carousel-img{
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+}
+#nav-sakila{
+  a{
+    color: #a52a2a;
+  }
+  box-shadow: 0 2px 1px -1px #a52a2a;
+  
+}
+#sidebar-wrapper{
+  background-color: #a52a2a !important;
+}
