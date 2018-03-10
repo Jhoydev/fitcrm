@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row mb-3">
             <div class="col-md-12">
-                <h3 class="text-center"><i class="fa fa-trophy text-warning"></i> {{ $champioship->name }} <i class="ml-5 fa fa-calendar text-danger"></i> {{ $champioship->date->toFormattedDateString() }}</h3>
+                <h3 class="text-center"><i class="fa fa-trophy text-warning"></i> {{ $championship->name }} <i class="ml-5 fa fa-calendar text-danger"></i> {{ $championship->date->toFormattedDateString() }}</h3>
             </div>
         </div>
         <div class="row">

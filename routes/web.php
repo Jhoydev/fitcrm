@@ -22,7 +22,7 @@ Auth::routes();
 
 Route::resource('/','FrontController');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/notification', 'HomeController@sendNotification');
+Route::post('/send/contact', 'FrontController@sendContact');
 Route::resource('/contacts','ContactController');
 Route::resource('/members','MemberController');
 

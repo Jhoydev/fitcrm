@@ -30,12 +30,6 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li>
-                            <a href="{{ url('members') }}" class="nav-link"><i class="fa fa-users text-info"></i> Miembros</a>
-                        </li>
-                        <li>
-                            <a href="{{ url('rankings') }}" class="nav-link"><i class="fa fa-list-alt"></i> Rankings</a>
-                        </li>
-                        <li>
                             <a href="{{ url('championships') }}" class="nav-link"><i class="fa fa-trophy text-warning"></i> Campeonatos</a>
                         </li>
                     </ul>
@@ -68,7 +62,6 @@
                 </div>
             </div>
         </nav>
-
         <main class="py-4">
             @yield('content')
         </main>

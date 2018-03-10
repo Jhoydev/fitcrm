@@ -48,8 +48,8 @@ class ChampionshipController extends Controller
      */
     public function show($id)
     {
-        $champioship = Championship::find($id);
-        return view('championships.show',compact('champioship'));
+        $championship = Championship::find($id);
+        return view('championships.show',compact('championship'));
     }
 
     /**
@@ -90,7 +90,14 @@ class ChampionshipController extends Controller
     public function members($id)
     {
         $championship = Championship::find($id);
-        return view('championships.members',compact('championship'));
+
+        $list_members = array();
+
+        foreach($championship->members as $member):
+            $list_members[$member->category->id][] = $member;
+        endforeach;
+
+        return view('championships.members',compact('championship','list_members'));
     }
 
 

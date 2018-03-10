@@ -6,20 +6,20 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use App\Member;
 
-class MailNotification extends Mailable
+class MailContact extends Mailable
 {
     use Queueable, SerializesModels;
-    public $member;
+
+    public $content;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Member $member)
+    public function __construct($content)
     {
-        $this->member = $member;
+        $this->content = $content;
     }
 
     /**
@@ -29,6 +29,6 @@ class MailNotification extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.notification');
+        return $this->view('mails.contact')->subject("Contacto de FitCRM");
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Championship;
 use App\Club;
 use App\Member;
 use Illuminate\Http\Request;
@@ -29,6 +30,7 @@ class MemberController extends Controller
     {
         $categories = Category::orderBy('name', 'ASC')->pluck('name', 'id');
         $clubs = Club::orderBy('name', 'ASC')->pluck('name', 'id');
+
         return view('members.create',compact('categories','clubs'));
     }
 
@@ -53,7 +55,8 @@ class MemberController extends Controller
     public function show($id)
     {
         $member = Member::find($id);
-        return view('members.show',compact('member'));
+        $championships = Championship::whereRaw('date >= CURRENT_DATE()')->get();
+        return view('members.show',compact('member','championships'));
     }
 
     /**

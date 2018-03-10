@@ -10,7 +10,7 @@ class Championship extends Model
     protected $dates = ['date'];
 
     public  function members(){
-        return $this->belongsToMany(Member::class);
+        return $this->belongsToMany(Member::class)->orderBy('category_id','ASC');
     }
     public  function categories(){
         return $this->belongsToMany(Category::class);

@@ -1,6 +1,7 @@
 
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url('https://fonts.googleapis.com/css?family=Bungee|Holtwood+One+SC|IM+Fell+Double+Pica+SC|New+Rocker|Secular+One|Vollkorn+SC|Playfair+Display');
 
 // Variables
 @import "variables";
@@ -8,7 +9,12 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+h2,h5{
+  color: #1b1b1b;
+  font-family:  $font-h1;
 }
