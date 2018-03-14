@@ -30,6 +30,12 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li>
+                            <a href="{{ url('/') }}" class="nav-link"><i class="fa fa-users text-primary"></i> Atletas</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('clubs') }}" class="nav-link"><i class="fa fa-copyright text-warning"></i> Clubs</a>
+                        </li>
+                        <li>
                             <a href="{{ url('championships') }}" class="nav-link"><i class="fa fa-trophy text-warning"></i> Campeonatos</a>
                         </li>
                     </ul>
@@ -69,5 +75,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    @yield('my_script')
 </body>
 </html>

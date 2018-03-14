@@ -1,14 +1,16 @@
-<div class="row my-5">
-    <div class="col-12">
-        <h5 class="text-center"><i class="fa fa-trophy" aria-hidden="true"></i> Proximos campeonatos federados</h5>
-        <div class="list-group">
-            @foreach($championships as $championship)
-            <a href="{{ url("championships/$championship->id") }}" class="list-group-item list-group-item-action">{{ $championship->name }} - {{ $championship->date->toFormattedDateString() }}</a>
-            @endforeach
-        </div>
+@if(count($championships))
+    <div class="row my-5">
+        <div class="col-12">
+            <h5 class="text-center"><i class="fa fa-trophy" aria-hidden="true"></i> Proximos campeonatos federados</h5>
+            <div class="list-group">
+                @foreach($championships as $championship)
+                    <a href="{{ url("championships/$championship->id") }}" class="list-group-item list-group-item-action">{{ $championship->name }} - {{ $championship->date->toFormattedDateString() }}</a>
+                @endforeach
+            </div>
 
+        </div>
     </div>
-</div>
+@endif
 <div class="row my-5">
     <div class="col-12">
         <h5><i class="fa fa-phone" aria-hidden="true"></i> Contacto</h5>

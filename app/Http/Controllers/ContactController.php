@@ -14,7 +14,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $contacts = Contact::ordeyBy('id')->limit(5);
+        $contacts = Contact::orderBy('id')->limit(5);
         return view('contacts.index',compact('contacts'));
     }
 
@@ -83,4 +83,12 @@ class ContactController extends Controller
     {
         //
     }
+
+    public function judges()
+    {
+        $judges = Contact::where('contact_type_id','=','2')->paginate(100);
+        return view('contacts.judges',compact('judges'));
+    }
+
+
 }

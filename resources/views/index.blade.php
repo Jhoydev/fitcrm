@@ -91,7 +91,7 @@
 
                     </div>
                     <div class="col-12 d-flex justify-content-center">
-                        {{ $members->links() }}
+                        {{ $members->appends(Request::only(['name','club_id','category_id']))->links() }}
                     </div>
                 </div>
             </div>

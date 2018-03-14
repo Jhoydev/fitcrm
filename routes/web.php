@@ -23,8 +23,12 @@ Auth::routes();
 Route::resource('/','FrontController');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/send/contact', 'FrontController@sendContact');
+
+Route::get('/contacts/judges','ContactController@judges');
 Route::resource('/contacts','ContactController');
+
 Route::resource('/members','MemberController');
 
 Route::get('/championships/{id}/members','ChampionshipController@members');
 Route::resource('/championships','ChampionshipController');
+Route::resource('/clubs','ClubController');

@@ -5,7 +5,8 @@
             <div class="col-lg-9">
                 <div class="row mb-3 d-none">
                     <div class="col-12 text-right">
-                        <a href="{{ url("/members/$member->id/edit") }}" class="btn btn-primary btn-sm"><i class="fa fa-pencil-alt" aria-hidden="true"></i>
+                        <a href="{{ url("/members/$member->id/edit") }}" class="btn btn-primary btn-sm"><i class="fa fa-pencil-alt"
+                                                                                                           aria-hidden="true"></i>
                             Editar</a>
                     </div>
                 </div>
@@ -56,7 +57,7 @@
                                 <div class="col-md-3 mb-3">
                                     <div class="card">
                                         <div class="card-text">
-                                            <a href="#">
+                                            <a href="{{ url("championships/".$member->championships[$i]->id) }}">
                                                 <ul class="list-group list-group-flush" style="font-size: 12px">
                                                     <li class="list-group-item">{{ $member->championships[$i]->name }}</li>
                                                     <li class="list-group-item">{{ $member->championships[$i]->date->toFormattedDateString() }}</li>
@@ -80,25 +81,78 @@
                         </div>
                     </div>
                 </div>
+                <div class="row grid my-4">
+                    <div class="col-md-3 col-sm-6 grid-item mb-4">
+                        <img class="img-fluid img-thumbnail" src="{{ url(asset('images/members/1/1.jpg')) }}" alt="">
+                    </div>
+                    <div class="col-md-3 col-sm-6 grid-item mb-4">
+                        <img class="img-fluid img-thumbnail" src="{{ url(asset('images/members/1/2.jpg')) }}" alt="">
+                    </div>
+                    <div class="col-md-3 col-sm-6 grid-item mb-4">
+                        <img class="img-fluid img-thumbnail" src="{{ url(asset('images/members/1/3.jpg')) }}" alt="">
+                    </div>
+                    <div class="col-md-3 col-sm-6 grid-item mb-4">
+                        <img class="img-fluid img-thumbnail" src="{{ url(asset('images/members/1/1.jpg')) }}" alt="">
+                    </div>
+                    <div class="col-md-3 col-sm-6 grid-item mb-4">
+                        <img class="img-fluid img-thumbnail" src="{{ url(asset('images/members/1/4.jpg')) }}" alt="">
+                    </div>
+                    <div class="col-md-3 col-sm-6 grid-item mb-4">
+                        <img class="img-fluid img-thumbnail" src="{{ url(asset('images/members/1/5.jpg')) }}" alt="">
+                    </div>
+                    <div class="col-md-3 col-sm-6 grid-item mb-4">
+                        <img class="img-fluid img-thumbnail" src="{{ url(asset('images/members/1/7.jpg')) }}" alt="">
+                    </div>
+                    <div class="col-md-3 col-sm-6 grid-item mb-4">
+                        <img class="img-fluid img-thumbnail" src="{{ url(asset('images/members/1/1.jpg')) }}" alt="">
+                    </div>
+                    <div class="col-md-3 col-sm-6 grid-item mb-4">
+                        <img class="img-fluid img-thumbnail" src="{{ url(asset('images/members/1/8.jpg')) }}" alt="">
+                    </div>
+                    <div class="col-md-3 grid-item mb-4">
+                        <img class="img-fluid img-thumbnail" src="{{ url(asset('images/members/1/1.jpg')) }}" alt="">
+                    </div>
+                    <div class="col-md-3 grid-item mb-4">
+                        <img class="img-fluid img-thumbnail" src="{{ url(asset('images/members/1/9.jpg')) }}" alt="">
+                    </div>
+                    <div class="col-md-3 grid-item mb-4">
+                        <img class="img-fluid img-thumbnail" src="{{ url(asset('images/members/1/10.jpg')) }}" alt="">
+                    </div>
+
+
+                </div>
+
                 <div class="row my-4">
                     <div class="col-10">
-                        <h5><i class="fa fa-trophy" aria-hidden="true"></i> Campeonatos amateur<a href="#" class="btn btn-info btn-sm d-none"><i class="fa fa-plus" aria-hidden="true"></i></a></h5>
+                        <h5><i class="fa fa-trophy" aria-hidden="true"></i> Campeonatos amateur<a href="#" class="btn btn-info btn-sm d-none"><i
+                                        class="fa fa-plus" aria-hidden="true"></i></a></h5>
                     </div>
                     @if ($member->Curriculum)
                         <div class="col-12">
-                            @foreach($member->Curriculum as $description)
-                                <div class="card mb-2">
-                                    <div class="card-header d-flex justify-content-between">
-                                        <div>{{ $description->year }}</div>
-                                        <div>
-                                            <a href="#" class="btn btn-primary btn-sm d-none"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        {!! $description->text !!}
+                            <ul class="nav nav-tabs" id="myTab" role="tablist" style="border-bottom: none">
+                                @for($i = 0; $i < count($member->Curriculum); $i++)
+                                    <li class="nav-item">
+                                        <a class="nav-link @if($i == 0) active @endif" id="{{ $member->Curriculum[$i]->year }}-tab" data-toggle="tab" href="#{{ $member->Curriculum[$i]->year }}"
+                                           role="tab" aria-controls="{{ $member->Curriculum[$i]->year }}" aria-selected="true">{{ $member->Curriculum[$i]->year }}</a>
+                                    </li>
+                                @endfor
+                            </ul>
+                            <div class="card">
+
+                                <div class="card-body">
+
+                                    <div class="tab-content" id="myTabContent">
+                                        @for($i = 0; $i < count($member->Curriculum); $i++)
+                                        <div class="tab-pane fade show @if($i == 0) active @endif" id="{{ $member->Curriculum[$i]->year }}" role="tabpanel"
+                                                 aria-labelledby="{{ $member->Curriculum[$i]->year }}-tab">
+
+                                                {!! $member->Curriculum[$i]->text !!}
+                                            </div>
+                                        @endfor
                                     </div>
                                 </div>
-                            @endforeach
+
+                            </div>
                         </div>
                     @endif
                 </div>
@@ -106,23 +160,44 @@
                     <div class="col-md-8">
                         <div class="row">
                             <div class="col-10">
-                                <h5><i class="fa fa-glass" aria-hidden="true"></i> Curriculum academico <a href="#" class="btn btn-info btn-sm d-none"><i class="fa fa-plus"></i></a></h5>
+                                <h5><i class="fa fa-glass" aria-hidden="true"></i> Curriculum academico <a href="#"
+                                                                                                           class="btn btn-info btn-sm d-none"><i
+                                                class="fa fa-plus"></i></a></h5>
                             </div>
                         </div>
                         @if ($member->Academy)
-                            @foreach($member->Academy as $description)
-                                <div class="card mb-2">
-                                    <div class="card-header d-flex justify-content-between">
-                                        <div>{{ $description->year }}</div>
-                                        <div>
-                                            <a href="#" class="btn btn-primary btn-sm d-none"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        {!! $description->text !!}
+                            <ul class="nav nav-tabs" id="myTab2" role="tablist" style="border-bottom: none">
+                                @for($i = 0; $i < count($member->Academy); $i++)
+                                    <li class="nav-item">
+                                        <a class="nav-link @if($i == 0) active @endif" id="{{$member->Academy[$i]->year }}-tab" data-toggle="tab"
+                                           href="#{{$member->Academy[$i]->year }}"
+                                           role="tab" aria-controls="{{$member->Academy[$i]->year }}"
+                                           aria-selected="true">{{$member->Academy[$i]->year }}</a>
+                                    </li>
+                                @endfor
+                            </ul>
+                            <div class="card">
+
+                                <div class="card-body">
+
+                                    <div class="tab-content" id="myTab2Content">
+                                        @for($i = 0; $i < count($member->Academy); $i++)
+                                            @if ($i == 0)
+                                                <div class="tab-pane fade show active" id="{{$member->Academy[$i]->year }}" role="tabpanel"
+                                                     aria-labelledby="{{ $member->Academy[$i]->year }}-tab">
+                                                    {!! $member->Academy[$i]->text !!}
+                                                </div>
+                                            @else
+                                                <div class="tab-pane fade show" id="{{$member->Academy[$i]->year }}" role="tabpanel"
+                                                     aria-labelledby="{{ $member->Academy[$i]->year }}-tab">
+                                                    {!! $member->Academy[$i]->text !!}
+                                                </div>
+                                            @endif
+                                        @endfor
                                     </div>
                                 </div>
-                            @endforeach
+
+                            </div>
                         @endif
                     </div>
                     <div class="col-md-4">
@@ -137,4 +212,11 @@
         </div>
 
     </div>
+@endsection
+@section('my_script')
+
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script>
+        $('.grid').masonry();
+    </script>
 @endsection
