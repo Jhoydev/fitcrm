@@ -16,7 +16,7 @@ class CreateChampionshipsTable extends Migration
         Schema::create('championships', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',128)->index();
-            $table->timestamp('date')->index();
+            $table->timestamp('date')->default(DB::raw('CURRENT_TIMESTAMP'))->index();
             $table->timestamps();
         });
     }
